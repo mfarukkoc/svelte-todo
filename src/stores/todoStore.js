@@ -1,11 +1,7 @@
 import { writable } from "svelte/store";
 
 export default function createTodoStore() {
-  const { subscribe, set, update } = writable([
-    { checked: false, info: "Mahmud" },
-    { checked: true, info: "Ustura kamil" },
-    { checked: false, info: "Mahmud Ters" }
-  ]);
+  const { subscribe, set, update } = writable([]);
 
   const stored = localStorage.getItem("todoStore");
   if (stored) set(JSON.parse(stored));
